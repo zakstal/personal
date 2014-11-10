@@ -1,0 +1,85 @@
+// Place all the styles related to the pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+main, section, img, div, form, input, textarea {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  color: inherit;
+  display: block;
+  font-family: sans-serif;
+}
+
+body {
+  background: #eee;
+}
+
+#face {
+  position: absolute;
+  height: 150px;
+  width: 150px;
+  background: blue;
+  right: 100px;
+  margin-top: -100px;
+  border-radius: 100px;
+}
+
+#buffer {
+  height: 150px;
+}
+
+main {
+  margin-top: 150px;
+  position: relative;
+  margin: auto;
+  width: 700px;
+  background: transparent;
+
+}
+
+
+#all-content {
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 20px;
+}
+
+
+
+#summery {
+  // height: 100px;
+  padding: 5px;
+  background: red;
+  overflow: hidden;
+}
+
+#projects {
+  // height: 100px;
+  padding: 5px;
+  background: blue;
+  // overflow: hidden;
+}
+
+.project {
+  display: inline-block;
+  width: 300px;
+}
+
+.project-image {
+  width: 200px;
+  height: 150px;
+  margin: auto;
+}
+
+.project p {
+  margin: auto;
+  padding: 10px;
+  width: 200px;
+}
+
+form {
+  padding: 5px;
+  background: red
+}
