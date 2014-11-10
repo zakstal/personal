@@ -1,22 +1,46 @@
-
+''
 <main>
   <div id="buffer">
 
   </div>
-  <div id="all-content">
-    <img src="" id="face" />
+    <section id="head-window">
+        <ul id="head-nav">
+          <li id="nav-header">Intro</li>
+          <li id="nav-header">About Me</li>
+          <li id="nav-header">Projects</li>
+          <li id="nav-header">Contact</li>
+        </ul>
+      </section>
+      <div id="all-content">
+
+    <div id="face"></div>
+    <div id="social">
+      <div class="list">
+        <div class="list-item"></div>
+        <div class="list-item"></div>
+        <div class="list-item"></div>
+      </div>
+    </div>
+    <ul id="side-nav">
+      <li class="side-nav-li" id="intro-tab" data-id="intro">Intro</li>
+      <li class="side-nav-li" id="about-tab" data-id="about">About</li>
+      <li class="side-nav-li" id="project-tab" data-id="projects">Projects</li>
+      <li class="side-nav-li" id="Contact-tab" data-id="contact">Contact</li>
+    </ul>
+
+
     <div id="title">
-      <h1>Title</h1>
+      <h1>Zachary Stallings</h1>
     </div>
 
-    <section id="summery">
-      <h3>summer</h3>
+    <section id="intro" data-id="0" class="">
+      <h3>summery</h3>
       <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       </p>
     </section>
 
-    <section id="projects">
+    <section id="projects" class="hidden" data-id="-200">
       <h3>projects</h3>
       <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -38,7 +62,11 @@
         <img src="" class="project-image">
         <p>this is a project. its the best project. its bette than these other projects</p>
       </div>
-      
+
+    </section>
+
+    <section id="about" data-id="-100">
+
     </section>
 
     <form id="email-me" action="" method="post">
@@ -46,3 +74,27 @@
     </form>
   </div>
 </main>
+
+
+<script charset="utf-8">
+  $(document).ready(function() {
+    this.currentTab = $('#intro')
+    var that = this;
+    $('#side-nav').on('click', function(event) {
+
+      var tabContent = $(event.target).data('id')
+
+      that.currentTab.addClass("hidden")
+      that.currentTab = $('#' + tabContent)
+      that.currentTab.removeClass("hidden")
+
+      var headNavLocation = that.currentTab.data('id');
+
+      $('#head-nav').css('top', headNavLocation)
+
+
+    });
+
+  });
+
+</script>

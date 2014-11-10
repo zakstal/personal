@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-main, section, img, div, form, input, textarea {
+main, section, img, div, form, input, h1, textarea {
   margin: 0;
   padding: 0;
   border: 0;
@@ -13,52 +13,158 @@ main, section, img, div, form, input, textarea {
 }
 
 body {
-  background: #eee;
+  background: #abb;
+  color: #333;
 }
 
 #face {
+  z-index: 100;
   position: absolute;
   height: 150px;
   width: 150px;
-  background: blue;
+  // background: blue;
   right: 100px;
   margin-top: -100px;
   border-radius: 100px;
+  background: image-url("me_rainbow6.png") no-repeat center;
+}
+
+#social {
+  position: absolute;
+  height: 160px;
+  width: 160px;
+  background: #e45;
+  right: 95px;
+  margin-top: -105px;
+  border-radius: 100px;
+  transition: all .2s;
+  // background: image-url("me_rainbow6.png") no-repeat center;
+}
+
+#face:hover + #social{
+  width: 255px;
+  right: 0px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 0;
+}
+
+#social:hover {
+  width: 255px;
+  right: 0px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 0;
+}
+
+.list {
+  position: relative;
+  right: 0;
+  background: #333;
+}
+
+
+.list-item {
+  position: absolute;
+  // margin-left: 200px;
+  right: 0px;
+  width: 70px;
+  height: 40px;
+
+  // background: #fff;
+}
+.list-item:nth-child(1) {
+  right: 20px;
+  top: 15px;
+  background: image-url("github.png") no-repeat center;
+  width: 70px;
+}
+
+.list-item:nth-child(2) {
+  right: 20px;
+  top: 60px;
+  background: image-url("facebook.png") no-repeat center;
+  width: 70px;
+}
+
+.list-item:nth-child(3) {
+  right: 20px;
+  top: 105px;
+  background: image-url("linkedin.png") no-repeat center;
+  width: 70px;
 }
 
 #buffer {
-  height: 150px;
+  height: 90px;
 }
 
 main {
-  margin-top: 150px;
+  margin-top: 100px;
   position: relative;
   margin: auto;
-  width: 700px;
+  width: 800px;
   background: transparent;
 
 }
 
+#nav-header {
+  display: block;
+  padding-left: 80px;
+  font-size: 80px;
+  color: #fff;
+}
+
+#head-nav {
+  transition: .3s;
+  position: relative;
+  top: -100px;
+}
+
+#head-window {
+  top: 80px;
+  padding-bottom: 20px;
+  overflow: hidden;
+  height: 80px;
+  width: 500px;
+}
+
 
 #all-content {
+  // border: 1px solid #aaa;
+  // border-right: 3px solid #e45;
+  // border-left: 3px solid #e45;
   background: #fff;
   padding: 20px 30px;
   border-radius: 20px;
+  margin-bottom: 300px;
 }
 
 
 
-#summery {
+#intro {
   // height: 100px;
   padding: 5px;
-  background: red;
+  // background: red;
   overflow: hidden;
+}
+
+#about {
+  padding: 5px;
+}
+
+#contact {
+  padding: 5px;
+}
+
+#title > h1 {
+  padding: 40px 10px 10px 60px;
+  font-family: sans-serif;
+  font-size: 50px;
+  font-weight: bold;
 }
 
 #projects {
   // height: 100px;
   padding: 5px;
-  background: blue;
+  // background: blue;
   // overflow: hidden;
 }
 
@@ -81,5 +187,36 @@ main {
 
 form {
   padding: 5px;
-  background: red
+  // background: red
+}
+
+.hidden {
+  display: none;
+}
+
+#side-nav {
+  position: absolute;
+  list-style: none;
+  // margin-top: -70px;
+  // margin-left: 70;
+  left: -156px;
+  // font-weight: bold;
+  color: #e45;
+  text-align: right;
+}
+
+.side-nav-li {
+  // display: inline-block;
+  padding: 15px;
+  font-size: 20px;
+  transition: .1s;
+}
+
+.side-nav-li:hover {
+  // font-size: 25px;
+  cursor: pointer;
+  background: #e45;
+  color: #fff;
+  border-left-top-radius: 5px;
+  border-left-bottom-radius: 5px;
 }
