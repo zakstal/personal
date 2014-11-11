@@ -12,13 +12,13 @@
 
 
   <div id="text-me">
-    <span class="c1 text-me-style">T</span>
-    <span class="c2 text-me-style">E</span>
-    <span class="c3 text-me-style">X</span>
-    <span class="c4 text-me-style">T</span>
-    <span class="c5 text-me-style"> </span>
-    <span class="c6 text-me-style">M</span>
-    <span class="c7 text-me-style">E</span>
+    <span id="c1" data-id="off" class="c1 text-me-style">T</span>
+    <span id="c2" class="text-me-style c2">E</span>
+    <span id="c3" class="text-me-style c3">X</span>
+    <span id="c4" class="text-me-style c4">T</span>
+    <!-- <span id="c5" class="text-me-style c5"> </span> -->
+    <span id="c6" class="text-me-style c6">M</span>
+    <span id="c7" class="text-me-style c7">E</span>
   </div>
   <div id="buffer">
 
@@ -54,9 +54,9 @@
     </div>
 
     <section id="intro" data-id="0" class="">
-      <h3>summery</h3>
+      <!-- <h3>summery</h3> -->
       <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Hi! I'm web developer in the New York area with experience in Ruby on Rails and Javascript. I have a background in
       </p>
     </section>
 
@@ -131,10 +131,81 @@
        }
     });
 
-      $('#text-tab-click').on('click', function() {
-        console.log("clicked")
-      });
 
+    var moveTextTab = function () {
+        $('#text-tab-click').on('click', function() {
+          console.log($('#text-tab'))
+          $('#text-tab').toggleClass('text-tab-left')
+          $('#text-tab').toggleClass('text-tab-right')
+        });
+      }
+
+
+    var moveLetters = function (elementNum, classNumStart, interval) {
+          setTimeout(function () {
+
+            $('#c' + elementNum).toggleClass('c' + (classNumStart ))
+            $('#c' + elementNum).toggleClass('c' + (classNumStart + 1))
+          },(interval));
+      }
+
+      var moveLettersBack = function (elementNum, classNumStart, interval) {
+            setTimeout(function () {
+              console.log(classNumStart -1)
+              $('#c' + elementNum).toggleClass('c' + (classNumStart - 1))
+              $('#c' + elementNum).toggleClass('c' + (classNumStart ))
+            },(interval));
+        }
+
+      var moveAllLetters = function ( numberOfPositions, interval) {
+          for (var i = 0; i <= numberOfPositions; i++) {
+            moveLetters(1,i + 1, i * interval)
+            moveLetters(2,i + 2, i * interval)
+            moveLetters(3,i + 3, i * interval)
+            moveLetters(4,i + 4, i * interval)
+            moveLetters(5,i + 5, i * interval)
+            moveLetters(6,i + 6, i * interval)
+            moveLetters(7,i + 7, i * interval)
+          }
+      }
+
+      var moveAllLettersBack = function ( numberOfPositions, interval) {
+          var j = 0
+          for (var i = numberOfPositions; i > 0; i--) {
+
+            console.log(i, "in all back")
+            moveLettersBack(1,i + 1, j * interval)
+            moveLettersBack(2,i + 2, j * interval)
+            moveLettersBack(3,i + 3, j * interval)
+            moveLettersBack(4,i + 4, j * interval)
+            moveLettersBack(5,i + 5, j * interval)
+            moveLettersBack(6,i + 6, j * interval)
+            moveLettersBack(7,i + 7, j * interval)
+            j++
+          }
+      }
+
+
+
+      console.log($('#c1').css('left'), "css value of c1")
+      var moveLettersBackAndForth = function () {
+        $('#text-tab-click').on('click', function () {
+          var $c1 = $('#c1')
+
+          if ($c1.data('id') === 'off') {
+            moveAllLetters(4,50);
+            $c1.data('id', 'on')
+          } else {
+            console.log('all letters back')
+            moveAllLettersBack(5,50)
+            $c1.data('id', 'off')
+          }
+
+        });
+        moveTextTab();
+      }
+
+      moveLettersBackAndForth()
   });
 
 </script>
