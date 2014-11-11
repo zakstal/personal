@@ -21,7 +21,7 @@
         <div class="list-item"></div>
       </div>
     </div>
-    <ul id="side-nav">
+    <ul class="side-nav" id="side-navigation">
       <li class="side-nav-li" id="intro-tab" data-id="intro">Intro</li>
       <li class="side-nav-li" id="about-tab" data-id="about">About</li>
       <li class="side-nav-li" id="project-tab" data-id="projects">Projects</li>
@@ -78,9 +78,13 @@
 
 <script charset="utf-8">
   $(document).ready(function() {
+
+
+
+
     this.currentTab = $('#intro')
     var that = this;
-    $('#side-nav').on('click', function(event) {
+    $('.side-nav').on('click', function(event) {
 
       var tabContent = $(event.target).data('id')
 
@@ -93,6 +97,19 @@
       $('#head-nav').css('top', headNavLocation)
 
 
+    });
+
+    $(window).scroll(function() {
+       if($(window).scrollTop() > 200) {
+         console.log($(window).scrollTop())
+         $('#side-navigation').removeClass('side-nav')
+         $('#side-navigation').addClass('side-nav-fixed')
+       }
+
+       if ($(window).scrollTop() < 200) {
+         $('#side-navigation').removeClass('side-nav-fixed')
+         $('#side-navigation').addClass('side-nav')
+       }
     });
 
   });
