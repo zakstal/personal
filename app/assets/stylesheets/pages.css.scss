@@ -236,3 +236,14 @@ form {
   border-left-top-radius: 5px;
   border-left-bottom-radius: 5px;
 }
+
+#text-tab {
+  z-index: -10;
+  border-top-left-radius: 20px;
+  top: 155px;
+  left: -15px;
+  position: absolute;
+  background: #e45;
+  height: 50px;
+  width: 50px;
+}

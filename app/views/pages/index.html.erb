@@ -1,5 +1,8 @@
 ''
 <main>
+  <div id="text-tab">
+
+  </div>
   <div id="buffer">
 
   </div>
@@ -65,7 +68,7 @@
 
     </section>
 
-    <section id="about" data-id="-100">
+    <section id="about" data-id="-100" class="hidden">
 
     </section>
 
@@ -101,7 +104,6 @@
 
     $(window).scroll(function() {
        if($(window).scrollTop() > 200) {
-         console.log($(window).scrollTop())
          $('#side-navigation').removeClass('side-nav')
          $('#side-navigation').addClass('side-nav-fixed')
        }
