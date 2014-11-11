@@ -203,6 +203,7 @@ form {
 
 }
 .side-nav {
+  top: 200px;
   position: absolute;
   // top: 2%;
   // left: 10%;
@@ -214,7 +215,7 @@ form {
 
 .side-nav-fixed {
   position: fixed;
-  top: 2%;
+  top: 3%;
   left: 11%;
   list-style: none;
   color: #e45;
@@ -238,12 +239,121 @@ form {
 }
 
 #text-tab {
+}
+
+
+.text-tab-left {
   z-index: -10;
-  border-top-left-radius: 20px;
-  top: 155px;
-  left: -15px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  top: 154px;
+  left: -16px;
   position: absolute;
   background: #e45;
-  height: 50px;
-  width: 50px;
+  height: 55px;
+  width: 70px;
+}
+
+.text-tab-right {
+  z-index: -10;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  top: 154px;
+  left: -16px;
+  position: absolute;
+  background: #e45;
+  height: 55px;
+  width: 70px;
+}
+
+
+
+#text-tab-click + #text-tab:hover  {
+  background: #e49;
+}
+
+#text-tab-click {
+
+  z-index: 10;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  top: 154px;
+  left: -16px;
+  position: absolute;
+  background: transparent;
+  height: 55px;
+  width: 70px;
+  cursor: pointer;
+}
+
+#text-me {
+  // display: none;
+  top: 90px;
+}
+
+.text-me-style {
+  font-size: 14px;
+  font-weight: bold;
+  color: #eff;
+}
+
+.c1 {
+  position: absolute;
+  -webkit-transform: rotate(-90deg);
+  margin-top: 180px;
+   height: 30px;
+
+   left: -5px;
+}
+.c2 {
+  position: absolute;
+  -webkit-transform: rotate(-80.1deg);
+  margin-top: 170px;
+ height: 30px;
+
+ left: -4px;
+}
+.c3 {
+  position: absolute;
+  -webkit-transform: rotate(-50.3deg);
+  margin-top: 161px;
+  height: 30px;
+
+  left: 1px;
+}
+.c4 {
+  position: absolute;
+  -webkit-transform: rotate(-15.3deg);
+  margin-top: 157px;
+  height: 30px;
+
+  left: 6px;
+}
+.c5 {
+  position: absolute;
+  -webkit-transform: rotate(-51.45deg);
+  margin-top: 157px;
+  height: 30px;
+
+  left: 10px;
+}
+
+.c6 {
+  position: absolute;
+  -webkit-transform: rotate(-0deg);
+  margin-top: 155px;
+  height: 30px;
+
+  left: 20px;
+}
+.c7 {
+  position: absolute;
+  -webkit-transform: rotate(-0deg);
+  margin-top: 155px;
+  height: 30px;
+
+  left: 35px;
 }
