@@ -1,4 +1,7 @@
 class ContactMailer < ActionMailer::Base
+
+  include SendGrid
+  
   def contact_email(email)
     @contact_email = email[:contact_email]
     @body = email[:body]
