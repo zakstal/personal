@@ -141,10 +141,11 @@
          var mainWidth = $('main').width()
 
          var leftMainMargin = ((bodyWidth - mainWidth)/2 )
+         console.log(mainWidth, bodyWidth, leftMainMargin)
          var leftMainMarginPercent = ((leftMainMargin/bodyWidth) * 100)/2
          $('#side-navigation').removeClass('side-nav')
          $('#side-navigation').addClass('side-nav-fixed')
-         $('#side-navigation').css('left', 1 + leftMainMarginPercent + "%")
+         $('#side-navigation').css('left', Math.ceil((leftMainMargin - 128)) + "px")
        }
 
        if ($(window).scrollTop() < 200) {
