@@ -2,7 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-main, section, img, div, form, input, h1, textarea {
+main, section, img, div, form, input, h1, textarea,
+button, form {
   margin: 0;
   padding: 0;
   border: 0;
@@ -15,6 +16,12 @@ main, section, img, div, form, input, h1, textarea {
 body {
   background: #abb;
   color: #333;
+}
+
+.group:after {
+  content: "";
+  display: none;
+  clear: both;
 }
 
 p {
@@ -149,12 +156,12 @@ main {
   // background: red;
   overflow: hidden;
   transition: .3s;
-  min-height: 300px;
+  min-height: 200px;
 }
 
 #about {
   padding: 5px;
-  min-height: 300px;
+  min-height: 200px;
 }
 
 #contact {
@@ -195,7 +202,7 @@ main {
 }
 
 form {
-  padding: 5px;
+  // padding: 5px;
   // background: red
 }
 
@@ -220,7 +227,7 @@ form {
 .side-nav-fixed {
   position: fixed;
   top: 3%;
-  left: 11%;
+  left: 142px;
   list-style: none;
   color: #e45;
   text-align: right;
@@ -246,33 +253,49 @@ form {
 #text-tab {
 }
 
+.text-message-show {
+  float: right;
+  display: block;
+  background: transparent;
+  width: 240px;
+  height: 45px;
+  padding: 3px;
+  padding-left: 5px;
+  margin: 3px;
+  margin-right: -270px;
+  margin-top: 156px;
+}
+
+.text-message-hide {
+  display: none;
+}
 
 .text-tab-left {
   z-index: -10;
-  border-top-left-radius: 30px;
+  border-top-left-radius: 35px;
   border-top-right-radius: 10px;
   border-bottom-left-radius: 10px;
   top: 154px;
-  left: -16px;
+  left: -17px;
   position: absolute;
   background: #e45;
   height: 55px;
-  width: 70px;
+  width: 71px;
   transition: all .2s;
 }
 
 .text-tab-right {
   z-index: -10;
   border-top-right-radius: 10px;
-  border-top-left-radius: 30px;
+  border-top-left-radius: 35px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   top: 154px;
-  left: -16px;
+  left: -17px;
   position: absolute;
   background: #e45;
   height: 55px;
-  width: 815px;
+  width: 1090px;
   transition: all .2s;
 }
 
@@ -293,8 +316,15 @@ form {
   position: absolute;
   background: transparent;
   height: 55px;
-  width: 70px;
+  width: 140px;
   cursor: pointer;
+}
+
+.text-message-submit {
+  height: 0;
+  width: 0;
+  padding: 0;
+  margin: 0;
 }
 
 #text-me {
@@ -435,5 +465,38 @@ form {
   height: 30px;
   transition: .1s;
   left: 110px;
+
+}
+
+
+
+textarea, input{
+  font-size: 20px;
+  background: #adf;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 6px 0 6px 0;
+
+  outline: none;
+}
+
+textarea {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+}
+
+input {
+  margin-right: 4px;
+  float: left;
+  display: inline-block;
+  width: 77%;
+
+}
+
+#submit {
+  color: #aaa;
+  width:15%;
+  float:right;
 
 }

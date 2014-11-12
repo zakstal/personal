@@ -1,12 +1,29 @@
+<!DOCTYPE html>
+<!-- saved from url=(0027)http://localhost:3000/pages -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>ZakResume</title>
+  <link data-turbolinks-track="true" href="http://localhost:3000/assets/application.css?body=1" media="all" rel="stylesheet">
+<link data-turbolinks-track="true" href="http://localhost:3000/assets/pages.css?body=1" media="all" rel="stylesheet">
+<link data-turbolinks-track="true" href="http://localhost:3000/assets/static_pages.css?body=1" media="all" rel="stylesheet">
+  <script data-turbolinks-track="true" src="./ZakResume_files/jquery.js"></script>
+<script data-turbolinks-track="true" src="./ZakResume_files/jquery_ujs.js"></script>
+<script data-turbolinks-track="true" src="./ZakResume_files/turbolinks.js"></script>
+<script data-turbolinks-track="true" src="./ZakResume_files/pages.js"></script>
+<script data-turbolinks-track="true" src="./ZakResume_files/static_pages.js"></script>
+<script data-turbolinks-track="true" src="./ZakResume_files/application.js"></script>
+  <meta content="authenticity_token" name="csrf-param">
+<meta content="Y76cdhK3C3HpDXQUevBLubcvYIETdmr6tDg1dg96pEE=" name="csrf-token">
+</head>
+<body>
+
 ''
 <main>
 
   <div id="text-tab-click">
 
   </div>
-  <input type="text" name="some_name" class="text-message-hide" id="text-message-out">
-  <input type="subit" class="text-message-submit" name="some_name" value="">
-  <div id="text-tab" class="text-tab-left group">
+
+  <div id="text-tab" class="text-tab-left">
 
   </div>
 
@@ -43,7 +60,7 @@
         <div class="list-item"></div>
       </div>
     </div>
-    <ul class="side-nav" id="side-navigation">
+    <ul class="side-nav-fixed" id="side-navigation">
       <li class="side-nav-li" id="intro-tab" data-id="intro">Intro</li>
       <li class="side-nav-li" id="about-tab" data-id="about">About</li>
       <li class="side-nav-li" id="project-tab" data-id="projects">Projects</li>
@@ -61,10 +78,11 @@
         Hi! I'm web developer in the New York area with experience in Ruby on Rails and Javascript. I have a background in retail furniture and visual art. Take a look at my coding projects or browse my resume. I would love to hear from you so drop me a line.
       </p>
 
-      <form class="group" action="index.html" method="post">
-        <%= form_auth %>
+      <form class="group" action="http://localhost:3000/index.html" method="post">
+              <input type="hidden" name="authenticity_token" value="Y76cdhK3C3HpDXQUevBLubcvYIETdmr6tDg1dg96pEE=">
+
       <input type="text" placeholder="From:" name="email[my_email]" value="">
-      <input type="hidden" placeholder="To:" name="email[your_eamil]" value="zakstal@gmail.com">
+      <input type="text" placeholder="To:" name="email[your_eamil]" value="zakstal@gmail.com">
       <input type="submit" id="submit" value="Send">
 
         <textarea name="eamil[body]" rows="8" cols="40"></textarea>
@@ -101,10 +119,7 @@
         I started creating static websites for my busniess and enjoyed creating them so much that I continued to learn.
       </p>
       <p>
-        I have experience in Ruby on Rails, Javascript, Backbone, node, SQL, HTML, and CSS. I have built numerous projects including a KickStarter clone built in Rails and Backbone, and the game Asteroids built in in canvas.
-      </p>
-      <p>
-        In my former occupations I worked as Operations Manager for chain of mattress stores and later as Owner Operater of Four Corners Funiture in Seattle, Wa.
+        I have experience in Ruby on Rails, Javascript, Backbone, node, SQL,
       </p>
     </section>
 
@@ -117,6 +132,9 @@
 
 <script charset="utf-8">
   $(document).ready(function() {
+
+
+
 
     this.currentTab = $('#intro')
     var that = this;
@@ -137,24 +155,24 @@
 
     $(window).scroll(function() {
        if($(window).scrollTop() > 200) {
-         var bodyWidth = $('body').width()
-         var mainWidth = $('main').width()
-
-         var leftMainMargin = ((bodyWidth - mainWidth)/2 )
-         var leftMainMarginPercent = ((leftMainMargin/bodyWidth) * 100)/2
          $('#side-navigation').removeClass('side-nav')
          $('#side-navigation').addClass('side-nav-fixed')
-         $('#side-navigation').css('left', 1 + leftMainMarginPercent + "%")
        }
 
        if ($(window).scrollTop() < 200) {
          $('#side-navigation').removeClass('side-nav-fixed')
          $('#side-navigation').addClass('side-nav')
-         $('#side-navigation').css('left', -134 + "px")
        }
     });
 
 
+    var moveTextTab = function () {
+        $('#text-tab-click').on('click', function() {
+          console.log($('#text-tab'))
+          $('#text-tab').toggleClass('text-tab-left')
+          $('#text-tab').toggleClass('text-tab-right')
+        });
+      }
 
 
     var moveLetters = function (elementNum, classNumStart, interval) {
@@ -188,6 +206,8 @@
       var moveAllLettersBack = function ( numberOfPositions, interval) {
           var j = 0
           for (var i = numberOfPositions; i > 0; i--) {
+
+            console.log(i, "in all back")
             moveLettersBack(1,i + 1, j * interval)
             moveLettersBack(2,i + 2, j * interval)
             moveLettersBack(3,i + 3, j * interval)
@@ -204,28 +224,27 @@
       console.log($('#c1').css('left'), "css value of c1")
       var moveLettersBackAndForth = function () {
         $('#text-tab-click').on('click', function () {
-          $('#text-tab').toggleClass('text-tab-left');
-          $('#text-tab').toggleClass('text-tab-right');
-          $('#text-message-out').toggleClass('text-message-hide');
-          $('#text-message-out').toggleClass('text-message-show');
-          setTimeout(function() {
-              $('#text-message-out').focus();
-          },200)
-
           var $c1 = $('#c1')
 
           if ($c1.data('id') === 'off') {
-            moveAllLetters(4,50);
+            moveAllLetters(4,30);
             $c1.data('id', 'on')
           } else {
-            moveAllLettersBack(5,50)
+            console.log('all letters back')
+            moveAllLettersBack(5,40)
             $c1.data('id', 'off')
           }
 
         });
+        moveTextTab();
       }
 
       moveLettersBackAndForth()
   });
 
 </script>
+
+
+
+
+</body></html>
