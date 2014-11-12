@@ -1,7 +1,7 @@
 class ChatsController < ApplicationController
 
   skip_before_action :verify_authenticity_token
-  
+
   def receive
 
 		Chat.create!(from_user_id: "me", to_user_id: "user", chat: word)
@@ -25,7 +25,7 @@ class ChatsController < ApplicationController
   end
 
 
-  end
+
 
   def all_chats
     Chat.all.each do |post|
