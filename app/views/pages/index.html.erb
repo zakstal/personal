@@ -55,62 +55,12 @@
       <h1>Zachary Stallings</h1>
     </div>
 
-    <section id="intro" data-id="-100" class="">
-      <!-- <h3>summery</h3> -->
-      <p>
-        Hi! I'm web developer in the New York area with experience in Ruby on Rails and Javascript. I have a background in retail furniture and visual art. Take a look at my coding projects or browse my resume. I would love to hear from you so drop me a line.
-      </p>
+    <%= render "intro" %>
 
-      <form class="group" action="index.html" method="post">
-        <%= form_auth %>
-      <input type="text" placeholder="From:" name="email[my_email]" value="">
-      <input type="hidden" placeholder="To:" name="email[your_eamil]" value="zakstal@gmail.com">
-      <input type="submit" id="submit" value="Send">
+    <%= render "about" %>
 
-        <textarea name="eamil[body]" rows="8" cols="40"></textarea>
-      </form>
-    </section>
+    <%= render "projects" %>
 
-    <section id="projects" class="hidden" data-id="-300">
-      <h3>projects</h3>
-      <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      </p>
-
-      <div class="project">
-        <img src="" class="project-image">
-        <p>A clone of one of my favorite websites kickstarter. You can create a campaign and pledge to you favorite projects. </p>
-      </div>
-      <div class="project">
-        <img src="" class="project-image">
-        <p>Asteroids! This project was created with cavas. Fly around space destroying asteroids. Just dont get crushed!</p>
-      </div>
-      <div class="project">
-        <img src="" class="project-image">
-        <p>this is a project. its the best project. its bette than these other projects</p>
-      </div>
-      <div class="project">
-        <img src="" class="project-image">
-        <p>this is a project. its the best project. its bette than these other projects</p>
-      </div>
-
-    </section>
-
-    <section id="about" data-id="-200" class="hidden">
-      <p>
-        I started creating static websites for my busniess and enjoyed creating them so much that I continued to learn.
-      </p>
-      <p>
-        I have experience in Ruby on Rails, Javascript, Backbone, node, SQL, HTML, and CSS. I have built numerous projects including a KickStarter clone built in Rails and Backbone, and the game Asteroids built in in canvas.
-      </p>
-      <p>
-        In my former occupations I worked as Operations Manager for chain of mattress stores and later as Owner Operater of Four Corners Funiture in Seattle, Wa.
-      </p>
-    </section>
-
-    <form id="email-me" action="" method="post">
-
-    </form>
   </div>
 </main>
 
@@ -141,11 +91,11 @@
          var mainWidth = $('main').width()
 
          var leftMainMargin = ((bodyWidth - mainWidth)/2 )
-         console.log(mainWidth, bodyWidth, leftMainMargin)
+        //  console.log(mainWidth, bodyWidth, leftMainMargin)
          var leftMainMarginPercent = ((leftMainMargin/bodyWidth) * 100)/2
          $('#side-navigation').removeClass('side-nav')
          $('#side-navigation').addClass('side-nav-fixed')
-         $('#side-navigation').css('left', Math.ceil((leftMainMargin - 128)) + "px")
+         $('#side-navigation').css('left', Math.ceil((leftMainMargin - 127)) + "px")
        }
 
        if ($(window).scrollTop() < 200) {

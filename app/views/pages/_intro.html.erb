@@ -1,0 +1,15 @@
+<section id="intro" data-id="-100" class="">
+  <!-- <h3>summery</h3> -->
+  <p>
+    Hi! I'm web developer in the New York area with experience in Ruby on Rails and Javascript. I have a background in retail furniture and visual art. Take a look at my coding projects or browse my resume. I would love to hear from you so drop me a line.
+  </p>
+
+  <form class="group" action="<%= deliver_url %>" method="post">
+    <%= form_auth %>
+  <input type="text" placeholder="From:" name="email[contact_email]" value="">
+  <input type="hidden" name="email[zak_eamil]" value="zakstal@gmail.com">
+  <input type="submit" id="submit" value="Send">
+
+    <textarea name="email[body]" rows="8" cols="40"></textarea>
+  </form>
+</section>

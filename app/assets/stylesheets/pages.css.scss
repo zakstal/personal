@@ -15,6 +15,10 @@ button, form {
 
 body {
   background: #abb;
+  //  background-image:
+  //   linear-gradient(
+  //     #abb, #add
+  //   );
   color: #333;
 }
 
@@ -45,6 +49,7 @@ p {
   height: 160px;
   width: 160px;
   background: #e45;
+  // -webkit-box-shadow: 5px 5px 20px #aaa;
   right: 95px;
   margin-top: -105px;
   border-radius: 100px;
@@ -142,8 +147,9 @@ main {
   // border: 1px solid #aaa;
   // border-right: 3px solid #e45;
   // border-left: 3px solid #e45;
+  // -webkit-box-shadow: 2px 2px 20px #888;
   background: #fff;
-  padding: 30px 80px 30px 80px;
+  padding: 30px 80px 10px 80px;
   border-radius: 20px;
   margin-bottom: 300px;
 }
@@ -498,5 +504,5 @@ input {
   color: #aaa;
   width:15%;
   float:right;
-
+  cursor: pointer;
 }
