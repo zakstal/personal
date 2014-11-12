@@ -19,12 +19,15 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+gem "letter_opener", :group => :development
+
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'pry-rails'
   gem 'quiet_assets'
-  gem "letter_opener"
 end
 
 gem 'pg'
+
+gem 'rails_12factor'
