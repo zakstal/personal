@@ -11,3 +11,31 @@
  *= require_self
  *= require_tree .
  */
+
+
+body > div > ul {
+  /*position: absolute;*/
+  width: 700px;
+  margin: auto;
+  height: 30px;
+  padding: 30px;
+  background: #eff;
+  margin-top: 20px;
+  border-radius: 20px;
+  list-style: none;
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 20px;
+}
+
+body > div > ul > li {
+  width: 700px;
+}
+
+
+body > div {
+displaly: block;
+  height: 50px;
+  margin: auto;
+  position: relative;
+}
