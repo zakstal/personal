@@ -21,6 +21,7 @@ Detail:
       -chess
         -does chess make a deep dup?
         -inherits classes
+        -make sure you have checkmate
     -list skils
         - Ruby
         - Ruby on Rails
@@ -114,6 +115,7 @@ Detail:
     -add tests
     -password confirmation
     -pingdome
+    -no shake for wrong username and password
   -asteroids
     -maybe startrek theme
 
@@ -144,3 +146,4 @@ Detail:
   -add google analytics
   -pingdome
   -add trello gem
+  -hover change for send buttom
