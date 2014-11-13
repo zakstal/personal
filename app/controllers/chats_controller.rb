@@ -4,7 +4,7 @@ class ChatsController < ApplicationController
 
   def receive
     puts "made it to receive"
-		Chat.create!(from: 1 to: 2, chat: params['Body'])
+		Chat.create!(from: 1, to: 2, chat: params['Body'])
 
     message_body = params["Body"]
     from_number = params["From"]
