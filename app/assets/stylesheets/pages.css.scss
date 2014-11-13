@@ -276,7 +276,8 @@ form {
 .message-box {
   display: block;
   border-radius: 20px;
-  // width: 200px;
+  min-width: 100px;
+  max-width: 200px;
   padding: 20px;
   clear: both;
   margin: 5px;

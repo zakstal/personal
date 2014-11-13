@@ -171,7 +171,18 @@
           }
       }
 
-
+      var checkIfInThiChat = function (arr) {
+        console.log("in check")
+        var unPostedMessages = []
+        arr.forEach(function (message) {
+            var index = thisChat.chat.indexOf(message.id)
+            if (index === -1){
+              thisChat.chat.push(message.id)
+              unPostedMessages.push(message)
+            }
+        });
+        return unPostedMessages;
+      }
 
       var getTextsFromDb = function () {
         setInterval(function () {
@@ -180,15 +191,14 @@
               console.log('receive')
               $.ajax({
                   type: "GET",
-                  url: address + "/chats/destroy_all_chats",
+                  url: address + "/chats/all",
                   success: function (resp) {
-                    console.log("reset", resp)
-                    var $list = $('#list');
-                    $list.html('');
+                    console.log("reset", resp[0].chat, "response")
 
-                    // resp.forEach(function(words) {
-                    //   $list.prepend('<div class="message-from-box message-box" >' + words.chat + '</div>');
-                    // });
+
+                    checkIfInThiChat(resp).forEach(function(message) {
+                      $('#text-frame').prepend('<div class="message-from-box message-box" >' + message.chat + '</div>');
+                    });
                   }
               });
             }

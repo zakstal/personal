@@ -32,7 +32,7 @@ class ChatsController < ApplicationController
 
 
   def all_chats
-    Chat.all
+    render json: Chat.last(5)
   end
 
   def destroy_all_chats
