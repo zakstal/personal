@@ -257,7 +257,38 @@ form {
 }
 
 
-#text-tab {
+#text-window {
+  position: absolute;
+  right: -270px;
+  background: transparent;
+  margin-top: 180px;
+  height: 600px;
+  width: 300px;
+}
+
+#text-frame {
+  position: relative;
+  display: block;
+  height: 100%;
+  background: transparent;
+}
+
+.message-box {
+  display: block;
+  border-radius: 20px;
+  // width: 200px;
+  padding: 20px;
+  clear: both;
+}
+
+.message-from-box {
+  float: left;
+  background: #aff;
+}
+
+.message-to-box {
+  float: right;
+  background: #eff;
 }
 
 .text-message-show {
@@ -271,6 +302,7 @@ form {
   margin: 3px;
   margin-right: -255px;
   margin-top: 121px;
+  z-index: 100;
 }
 
 .text-message-hide {

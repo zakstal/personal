@@ -15,8 +15,6 @@ class ChatsController < ApplicationController
 
   def send_out
 
-
-  	puts 'hereLSKDFLSDKFJLSDKFJSLDKFJ'
   	puts params
 
 
@@ -34,10 +32,14 @@ class ChatsController < ApplicationController
 
 
   def all_chats
+    Chat.all
+  end
+
+  def destroy_all_chats
     Chat.all.each do |post|
-			post.destroy
-		end
-		render json: "chats deleted"
+      post.destroy
+    end
+    render json: "chats deleted"
   end
 
 

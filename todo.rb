@@ -147,3 +147,5 @@ Detail:
   -pingdome
   -add trello gem
   -hover change for send buttom
+  -put javascript in its own file
+  -deal with texting in multiple sessions or close off all others if on is active

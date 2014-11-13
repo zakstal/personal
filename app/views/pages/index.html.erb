@@ -4,6 +4,12 @@
   <div id="text-tab-click">
 
   </div>
+
+  <div id="text-window">
+    <div id="text-frame">
+
+    </div>
+  </div>
   <form id="text-form">
 
 
@@ -74,7 +80,11 @@
 <script charset="utf-8">
   $(document).ready(function() {
 
-
+    var thisChat = {
+      isChatOn: false,
+      chat: []
+    }
+    var that = this
     setTimeout(function() {
       $('#notice').removeClass('notice')
       $('#notice').addClass('notice-hide')
@@ -130,7 +140,6 @@
 
       var moveLettersBack = function (elementNum, classNumStart, interval) {
             setTimeout(function () {
-              console.log(classNumStart -1)
               $('#c' + elementNum).toggleClass('c' + (classNumStart - 1))
               $('#c' + elementNum).toggleClass('c' + (classNumStart ))
             },(interval));
@@ -164,9 +173,52 @@
 
 
 
+      var getTextsFromDb = function () {
+        setInterval(function () {
+
+            if (thisChat.isChatOn) {
+              console.log('receive')
+              $.ajax({
+                  type: "GET",
+                  url: address + "/chats/destroy_all_chats",
+                  success: function (resp) {
+                    console.log("reset", resp)
+                    var $list = $('#list');
+                    $list.html('');
+
+                    // resp.forEach(function(words) {
+                    //   $list.prepend('<div class="message-from-box message-box" >' + words.chat + '</div>');
+                    // });
+                  }
+              });
+            }
+          },3000)
+
+      }
+
+
+
+      this.isChatOn = false
+
+
+      var toggleIsChatOn = function () {
+        if (!thisChat.isChatOn){
+          thisChat.isChatOn = true
+          console.log('chat is on',thisChat.isChatOn)
+
+          getTextsFromDb()
+        } else {
+          thisChat.isChatOn = false
+          console.log('chat is off', thisChat.isChatOn)
+
+        }
+      }
+
       console.log($('#c1').css('left'), "css value of c1")
       var moveLettersBackAndForth = function () {
+
         $('#text-tab-click').on('click', function () {
+          toggleIsChatOn();
           $('#text-tab').toggleClass('text-tab-left');
           $('#text-tab').toggleClass('text-tab-right');
           $('#text-message-out').toggleClass('text-message-hide');
@@ -200,9 +252,15 @@
         });
       }
 
+
+
+
       moveLettersBackAndForth()
 
     var address = "http://localhost:3000"//"zakstal.com"
+    var that = this
+
+
 
     $('#text-form').on('click','#text-message-submit', function (event) {
       console.log('here')
@@ -210,20 +268,20 @@
 			var $words = $('#text-message-out');
 			var $value = $words.val();
 			$words.val("");
-			// $('#list').prepend('<div class="list-item">' + $value + '</div>')
+			$('#text-frame').prepend('<div class="message-to-box message-box" >' + $value + '</div>')
 			console.log($value,"here2",document.location.hostname);
 
 
-  			$.ajax({
-  				type: "POST",
-  				url: address + "/chats/send_out",
-  				data: { 'body':$value },
-  				success: function (resp) {
-  					console.log("sent", resp)
-
-
-  				}
-        });
+  			// $.ajax({
+  			// 	type: "POST",
+  			// 	url: address + "/chats/send_out",
+  			// 	data: { 'body':$value },
+  			// 	success: function (resp) {
+  			// 		console.log("sent", resp)
+        //
+        //
+  			// 	}
+        // });
 			});
   });
 
