@@ -4,7 +4,7 @@ class ChatsController < ApplicationController
 
   def receive
     puts "made it to receive"
-		Chat.create!(from: "me", to: "user", chat: params['body'])
+		Chat.create!(from: 1 to: 2, chat: params['Body'])
 
     message_body = params["Body"]
     from_number = params["From"]
@@ -19,7 +19,7 @@ class ChatsController < ApplicationController
 
 
 
-    Chat.create!(from: "user", to: "me", chat: params["body"])
+    Chat.create!(from: 2, to: 1, chat: params["body"])
 
   	client = Twilio::REST::Client.new 'AC035e8397a69c77b3b8e9114cd1874b76', '182b2d908203f792b47b71a403bb30cc'
 
