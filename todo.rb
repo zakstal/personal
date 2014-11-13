@@ -113,6 +113,7 @@ Detail:
     -comments
     -add tests
     -password confirmation
+    -pingdome
   -asteroids
     -maybe startrek theme
 
@@ -141,3 +142,4 @@ Detail:
     -use sengrid in production
   -add projects
   -add google analytics
+  -pingdome
