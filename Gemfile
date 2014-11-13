@@ -33,3 +33,5 @@ gem 'pg'
 gem 'rails_12factor'
 
 gem 'sendgrid'
+
+gem 'twilio-ruby'

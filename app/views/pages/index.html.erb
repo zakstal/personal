@@ -4,8 +4,12 @@
   <div id="text-tab-click">
 
   </div>
+  <form id="text-form">
+
+
   <input type="text" name="some_name" class="text-message-hide" id="text-message-out">
-  <input type="subit" class="text-message-submit" name="some_name" value="">
+  <input type="submit" class="text-message-submit-hide" id="text-message-submit" name="some_name" value="">
+  </form>
   <div id="text-tab" class="text-tab-left group">
 
   </div>
@@ -159,6 +163,18 @@
           $('#text-tab').toggleClass('text-tab-right');
           $('#text-message-out').toggleClass('text-message-hide');
           $('#text-message-out').toggleClass('text-message-show');
+
+          if ($('#text-message-submit').hasClass('text-message-submit-show')) {
+            $('#text-message-submit').toggleClass('text-message-submit-hide');
+            $('#text-message-submit').toggleClass('text-message-submit-show');
+          } else {
+            setTimeout(function() {
+              $('#text-message-submit').toggleClass('text-message-submit-hide');
+                $('#text-message-submit').toggleClass('text-message-submit-show');
+            }, 200);
+          }
+
+
           setTimeout(function() {
               $('#text-message-out').focus();
           },200)
@@ -177,6 +193,30 @@
       }
 
       moveLettersBackAndForth()
+
+    var address = "http://localhost:3000"//"zakstal.com"
+
+    $('#text-form').on('click','#text-message-submit', function (event) {
+      console.log('here')
+			event.preventDefault();
+			var $words = $('#text-message-out');
+			var $value = $words.val();
+			$words.val("");
+			// $('#list').prepend('<div class="list-item">' + $value + '</div>')
+			console.log($value,"here2",document.location.hostname);
+
+
+  			$.ajax({
+  				type: "POST",
+  				url: address + "/chats/send_out",
+  				data: { 'body':$value },
+  				success: function (resp) {
+  					console.log("sent", resp)
+
+
+  				}
+        });
+			});
   });
 
 </script>

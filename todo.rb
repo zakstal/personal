@@ -143,3 +143,4 @@ Detail:
   -add projects
   -add google analytics
   -pingdome
+  -add trello gem
