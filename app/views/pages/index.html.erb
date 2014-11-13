@@ -202,7 +202,7 @@
 
 
                     checkIfInThiChat(resp).forEach(function(message) {
-                      $('#text-frame').prepend('<div class="message-from-box message-box" >' + message.chat + '</div>');
+                      $('#text-frame').prepend('<div class="message-from-box message-box" >' + message.chat + '<div class="bubble-tail-right"><div></div>');
                     });
                   }
               });
@@ -291,7 +291,7 @@
 			var $words = $('#text-message-out');
 			var $value = $words.val();
 			$words.val("");
-			$('#text-frame').prepend('<div class="message-to-box message-box" >' + $value + '</div>')
+			$('#text-frame').prepend('<div class="message-to-box message-box" >' + $value + '<div class="bubble-tail-left"><div></div>')
 			console.log($value,"here2",document.location.hostname);
 
 

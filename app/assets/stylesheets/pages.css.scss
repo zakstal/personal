@@ -280,18 +280,38 @@ form {
   max-width: 200px;
   padding: 20px;
   clear: both;
-  margin: 5px;
+  margin: 10px;
   text-align: center;
 }
 
 .message-from-box {
   float: left;
-  background: #aff;
+  background: #e89;
 }
 
 .message-to-box {
   float: right;
   background: #eff;
+}
+
+.bubble-tail-left {
+  float: right;
+    position: relative;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 20px solid #eff;
+  border-bottom: 10px solid transparent;
+  bottom: -50px;
+}
+
+.bubble-tail-right {
+  float: left;
+    position: relative;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 20px solid #e89;
+  border-bottom: 10px solid transparent;
+  bottom: -50px;
 }
 
 .text-message-show {

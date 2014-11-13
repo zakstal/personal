@@ -149,3 +149,4 @@ Detail:
   -hover change for send buttom
   -put javascript in its own file
   -deal with texting in multiple sessions or close off all others if on is active
+  -fix issue with side navbar not sticking to the mainbody properly
