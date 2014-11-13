@@ -287,11 +287,14 @@ form {
 .message-from-box {
   float: left;
   background: #e89;
+  -webkit-box-shadow: 10px 10px 10px #777;
+
 }
 
 .message-to-box {
   float: right;
   background: #eff;
+  -webkit-box-shadow: 10px 10px 10px #777;
 }
 
 .bubble-tail-left {
