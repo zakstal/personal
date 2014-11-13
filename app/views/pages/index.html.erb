@@ -219,6 +219,8 @@
 
         $('#text-tab-click').on('click', function () {
           toggleIsChatOn();
+          $('#text-frame').html("")
+
           $('#text-tab').toggleClass('text-tab-left');
           $('#text-tab').toggleClass('text-tab-right');
           $('#text-message-out').toggleClass('text-message-hide');
