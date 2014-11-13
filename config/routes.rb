@@ -5,5 +5,5 @@ ZakResume::Application.routes.draw do
   post "/chats/receive", to: "chats#receive"
   post "/chats/send_out", to: "chats#send_out"
   get "/chats/all", to: "chats#all_chats"
-  get "/chats/destroy_all_chats", to: "chats#destroy_all_chats"
+  post "/chats/destroy_all_chats", to: "chats#destroy_all_chats"
 end

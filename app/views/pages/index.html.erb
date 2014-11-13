@@ -84,7 +84,10 @@
       isChatOn: false,
       chat: []
     }
+
+    var address = "http://localhost:3000"//"zakstal.com"
     var that = this
+
     setTimeout(function() {
       $('#notice').removeClass('notice')
       $('#notice').addClass('notice-hide')
@@ -193,7 +196,7 @@
                   type: "GET",
                   url: address + "/chats/all",
                   success: function (resp) {
-                    console.log("reset", resp[0].chat, "response")
+                    // console.log("reset", resp[0].chat, "response")
 
 
                     checkIfInThiChat(resp).forEach(function(message) {
@@ -220,6 +223,13 @@
         } else {
           thisChat.isChatOn = false
           console.log('chat is off', thisChat.isChatOn)
+          $.ajax({
+            type: 'POST',
+            url: address + "/chats/destroy_all_chats",
+            success: function (res) {
+              console.log('chats deleted')
+            }
+          });
 
         }
       }
@@ -268,10 +278,6 @@
 
 
       moveLettersBackAndForth()
-
-    var address = "http://localhost:3000"//"zakstal.com"
-    var that = this
-
 
 
     $('#text-form').on('click','#text-message-submit', function (event) {
