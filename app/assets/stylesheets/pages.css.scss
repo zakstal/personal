@@ -281,6 +281,7 @@ form {
 }
 
 .message-box {
+  position: relative;
   display: block;
   border-radius: 20px;
   min-width: 100px;
@@ -289,6 +290,8 @@ form {
   clear: both;
   margin: 10px;
   text-align: center;
+  color: #333;
+  text-size: 30px;
 }
 
 .message-from-box {
@@ -305,23 +308,24 @@ form {
 }
 
 .bubble-tail-left {
-  float: right;
-    position: relative;
+    position: absolute;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
   border-top: 20px solid #eff;
   border-bottom: 10px solid transparent;
-  bottom: -50px;
+  bottom: -28px;
+  right: 15px;
 }
 
 .bubble-tail-right {
-  float: left;
+  position: absolute;
     position: relative;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
   border-top: 20px solid #e89;
   border-bottom: 10px solid transparent;
-  bottom: -50px;
+  bottom: -28px;
+  left: 15px;
 }
 
 .text-message-show {
@@ -336,6 +340,8 @@ form {
   margin-right: -255px;
   margin-top: 121px;
   z-index: 100;
+  color: #fff;
+  font-size: 25px;
 }
 
 .text-message-hide {
