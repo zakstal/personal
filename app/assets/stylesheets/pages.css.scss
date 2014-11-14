@@ -145,12 +145,9 @@ main {
 
 
 #all-content {
-  // border: 1px solid #aaa;
-  // border-right: 3px solid #e45;
-  // border-left: 3px solid #e45;
-  // -webkit-box-shadow: 2px 2px 20px #888;
   background: #fff;
-  padding: 30px 80px 10px 80px;
+
+  padding: 30px 80px 40px 80px;
   border-radius: 20px;
   margin-bottom: 300px;
 }
@@ -164,6 +161,13 @@ main {
   overflow: hidden;
   transition: .3s;
   min-height: 200px;
+}
+
+#intro > p {
+  // border-top: 1px solid #aaa;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding-bottom: 40px;
 }
 
 #about {
@@ -209,8 +213,8 @@ main {
 }
 
 form {
-  // padding: 5px;
-  // background: red
+  // border-top: 1px solid #aaa;
+  margin-top: 40px;
 }
 
 .hidden {
@@ -345,7 +349,7 @@ form {
   position: absolute;
   background: #e45;
   height: 55px;
-  width: 71px;
+  width: 75px;
   transition: all .3s;
 }
 
@@ -450,21 +454,22 @@ form {
 .c4 {
   // display: none;
   position: absolute;
-  -webkit-transform: rotate(-15.3deg);
-  margin-top: 123px;
-  height: 30px;
+  -webkit-transform: rotate(-25.3deg);
+  margin-top: 122px;
+  height: 25px;
   transition: .1s;
-  left: 6px;
+  left: 7px;
 }
 
 .c5 {
   // display: none;
   position: absolute;
+  // background: red;
   -webkit-transform: rotate(-0deg);
   margin-top: 120px;
   height: 30px;
   transition: .1s;
-  left: 15px;
+  left: 18px;
 }
 .c6 {
   // display: none;
@@ -473,7 +478,7 @@ form {
   margin-top: 120px;
   height: 30px;
   transition: .1s;
-  left: 24px;
+  left: 27px;
 }
 
 .c7 {
@@ -481,7 +486,7 @@ form {
   margin-top: 120px;
   height: 30px;
   transition: .1s;
-  left: 35px;
+  left: 39px;
 
 }
 .c8 {
@@ -489,7 +494,7 @@ form {
   margin-top: 120px;
   height: 30px;
   transition: .1s;
-  left: 47px;
+  left: 50px;
 
 }
 .c9 {
@@ -497,7 +502,7 @@ form {
   margin-top: 120px;
   height: 30px;
   transition: .1s;
-  left: 60px;
+  left: 63px;
 
 }
 .c10 {
@@ -505,7 +510,7 @@ form {
   margin-top: 120px;
   height: 30px;
   transition: .1s;
-  left: 70px;
+  left: 72px;
 
 }
 .c11 {
@@ -513,7 +518,7 @@ form {
   margin-top: 120px;
   height: 30px;
   transition: .1s;
-  left: 77px;
+  left: 80px;
 
 }
 
@@ -522,7 +527,7 @@ form {
   margin-top: 120px;
   height: 30px;
   transition: .1s;
-  left: 90px;
+  left: 93px;
 
 }
 

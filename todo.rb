@@ -1,5 +1,8 @@
  Todo:
-
+ resume (90% done)
+ coverletter
+ simon questions
+ go through simon email interview questions
 
 
 
@@ -136,17 +139,13 @@ Detail:
       -https://www.hackerrank.com/
 
   PresonalWebsite:
-  -add text
-  -add active record
   -add links
-  -add email
-    -user letter opener gem in development
-    -use sengrid in production
   -add projects
   -add google analytics
   -pingdome
-  -add trello gem
   -hover change for send buttom
   -put javascript in its own file
   -deal with texting in multiple sessions or close off all others if on is active
   -fix issue with side navbar not sticking to the mainbody properly
+  -add cookie auth for chat session
+  -put focus back onto text window after text

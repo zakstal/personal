@@ -212,6 +212,16 @@
       }
 
 
+      // $.ajax({
+      //   type: "POST",
+      //   url: address + "/chats/send_out",
+      //   data: { 'body':"someone is looking at your site" },
+      //   success: function (resp) {
+      //     console.log("sent", resp)
+      //   }
+      // });
+
+
 
       this.isChatOn = false
 
@@ -294,7 +304,7 @@
 			$('#text-frame').prepend('<div class="message-to-box message-box" >' + $value + '<div class="bubble-tail-left"><div></div>')
 			console.log($value,"here2",document.location.hostname);
 
-        
+
   			$.ajax({
   				type: "POST",
   				url: address + "/chats/send_out",
