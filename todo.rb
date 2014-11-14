@@ -98,6 +98,7 @@ Detail:
 
   projects:
   -kickstarter
+    -good readme
     -working project start
     -styling for catagory pages
     -working photo upload
@@ -119,7 +120,9 @@ Detail:
     -password confirmation
     -pingdome
     -no shake for wrong username and password
+
   -asteroids
+    -good readme
     -maybe startrek theme
 
   choosemeetups to attend:
