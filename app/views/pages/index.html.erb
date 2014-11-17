@@ -1,4 +1,14 @@
 
+<div id="container-all">
+
+
+<div id="game-window" class="hidden">
+
+  <div id="game-container">
+    <figure>&times;</figure>
+    <canvas id="game-canvas"></canvas>
+  </div>
+</div>
 <main>
 
   <div id="text-tab-click">
@@ -63,6 +73,7 @@
     </ul>
 
 
+
     <div id="title">
       <h1>Zachary Stallings</h1>
     </div>
@@ -76,6 +87,7 @@
   </div>
 </main>
 
+</div>
 
 <script charset="utf-8">
   $(document).ready(function() {
@@ -110,6 +122,7 @@
 
     });
 
+    $('#side-navigation').css('left', -134 + "px")
     $(window).scroll(function() {
        if($(window).scrollTop() > 200) {
          var bodyWidth = $('body').width()
@@ -317,5 +330,24 @@
         });
 			});
   });
+
+  $('figure').on("click", function (event) {
+    $('main').toggleClass('hidden')
+    $('#game-window ').toggleClass('hidden')
+  });
+
+  $('#asteroids').on("click", function (event) {
+    $('main').toggleClass('hidden')
+    $('#game-window ').toggleClass('hidden')
+  });
+
+  var backgroundImage = "<%= asset_path('outer-space.jpg') %>";
+  var canvasEl = document.getElementById("game-canvas");
+  var canvasHeight = canvasEl.height = window.innerHeight;
+  var canvasWidth = canvasEl.width = window.innerWidth;
+  var ctx = canvasEl.getContext("2d");
+  var ast = new Asteroids.GameView(ctx, canvasHeight, canvasWidth);
+  var image = document.getElementById("image-back")
+  ast.start(backgroundImage);
 
 </script>

@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-main, section, img, div, form, input, h1, textarea,
+body, main, section, img, div, form, input, h1, textarea,
 button, form {
   margin: 0;
   padding: 0;
@@ -13,7 +13,17 @@ button, form {
   font-family: lucida;
 }
 
+img {
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+html, body {
+  height: 100%;
+  position: relative;
+}
 body {
+
   background: #abb;
   // background: #ada;
   //  background-image:
@@ -21,6 +31,7 @@ body {
   //     #abb, #add
   //   );
   color: #333;
+
 }
 
 .group:after {
@@ -34,7 +45,7 @@ p {
 }
 
 #face {
-  z-index: 100;
+  z-index: 1;
   position: absolute;
   height: 150px;
   width: 150px;
@@ -119,7 +130,16 @@ main {
   margin: auto;
   width: 800px;
   background: transparent;
+  height: 100%;
+  // overflow-y: scroll;
+  // overflow: hidden;
+  // display: none;
 
+}
+
+#container-all {
+  height: 100%;
+  overflow-y: scroll;
 }
 
 #nav-header {
@@ -196,8 +216,9 @@ main {
 }
 
 .project {
+  border-radius: 20px;
   display: block;
-  // width: 300px;
+
   padding-top: 30px;
 }
 
@@ -222,6 +243,10 @@ form {
 
 .hidden {
   display: none;
+}
+
+.no-overflow {
+  overflow: hidden;
 }
 
 #side-navigation{
@@ -594,4 +619,57 @@ input {
 
 #submit:hover {
   background: #acf;
+}
+
+#return-to-projects {
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 30px;
+  color: #fff;
+}
+
+#game-canvas {
+
+  display: block;
+  overflow: hidden;
+  width: 1000px;
+  height: 600px;
+  margin: auto;
+  // display: none;
+  border: 5px solid #ccc;
+
+  z-index: 1000;
+  border-radius: 20px;
+}
+
+#game-container {
+  padding-top: 150px;
+  position: relative;
+  display: block;
+}
+
+#game-container > figure {
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
+  position: absolute;
+  right: 280px;
+  top: 150px;
+  cursor: pointer;
+  z-index: 3;
+}
+
+
+#game-window {
+    position: absolute;
+    // height: 100%;
+    // overflow: hidden;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    z-index: 2;
+    background-color:rgba(0, 0, 0, 0.5);
+    // display: none;
 }

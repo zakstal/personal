@@ -98,27 +98,39 @@ Detail:
 
   projects:
   -kickstarter
-    -good readme
     -working project start
+    -working project edit
+      -add instructions in story for description
+      -add links for subviews
     -styling for catagory pages
-    -working photo upload
-    -working video upload
+    -percent bar for catagory page
+    -at login page discover and start need to go somewhere else
     -reward update number when purchased
+    -working video upload
+    -working photo upload
+    -faker gem fake records
+    --pingdome
+    -style project start page
+    -style drop down menu
+    -good readme
+    -fix dorp down menu click on anywhere to close
+    -have backed projects and created projects dissaperar if empty
+    -styled logo
+    -faker gem fake records
     -facebook login
     -inbox alerts for when some one sings up for porjects
-    -faker gem fake records
     -shifting front page view
-    -styled logo
     -regex email check
     -search bar
     -working signin redirect
     -error alerts
+    -pusher
     -needs remove method for views
     -paginatepages
     -comments
     -add tests
     -password confirmation
-    -pingdome
+
     -no shake for wrong username and password
 
   -asteroids
@@ -152,3 +164,11 @@ Detail:
   -fix issue with side navbar not sticking to the mainbody properly
   -add cookie auth for chat session
   -put focus back onto text window after text
+
+
+  Email:
+    -change name on the account
+
+  forMondy17:
+    -fill out questions for simon
+    -fill send simon paperwork

@@ -50,13 +50,11 @@
 }
 
 body > div > ul > li {
-  width: 700px;
+  /*width: 700px;*/
 }
 
 
 body > div {
-displaly: block;
-  height: 30px;
-  margin: auto;
+
   position: relative;
 }
