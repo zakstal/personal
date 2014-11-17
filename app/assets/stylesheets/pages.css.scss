@@ -13,10 +13,7 @@ button, form {
   font-family: lucida;
 }
 
-img {
-  border-radius: 20px;
-  cursor: pointer;
-}
+
 
 html, body {
   height: 100%;
@@ -227,6 +224,8 @@ main {
   display: block;
   height: 400px;
   margin: auto;
+  border-radius: 20px;
+  cursor: pointer;
 }
 
 .project p {
@@ -635,30 +634,41 @@ input {
   overflow: hidden;
   width: 1000px;
   height: 600px;
-  margin: auto;
+
   // display: none;
   border: 5px solid #ccc;
 
-  z-index: 1000;
+  z-index: 3;
   border-radius: 20px;
 }
 
-#game-container {
-  padding-top: 150px;
-  position: relative;
-  display: block;
-}
+// #game-container > div {
+//
+//
+//   display: block;
+// }
 
-#game-container > figure {
+#game-container > div > figure {
   font-size: 30px;
   font-weight: bold;
   color: #fff;
   position: absolute;
-  right: 280px;
+  right: 10px;
   top: 150px;
+  // margin: auto;
   cursor: pointer;
   z-index: 3;
 }
+
+
+#game-container {
+  width: 1020px;
+  padding-top: 150px;
+  position: relative;
+  display: block;
+  margin: auto;
+}
+
 
 
 #game-window {
@@ -672,4 +682,8 @@ input {
     z-index: 2;
     background-color:rgba(0, 0, 0, 0.5);
     // display: none;
+}
+
+#asteroids {
+ background: image-url("asteroids.png") no-repeat center;
 }
