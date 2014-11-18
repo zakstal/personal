@@ -103,6 +103,9 @@ Detail:
       -add instructions in story for description
       -add links for subviews
     -styling for catagory pages
+    -make sure signin and sign up work
+    -style sign sign up
+    -signed in users can see the profiles of the creaters projects
     -percent bar for catagory page
     -at login page discover and start need to go somewhere else
     -reward update number when purchased

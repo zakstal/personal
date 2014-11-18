@@ -629,24 +629,14 @@ input {
 }
 
 #game-canvas {
-
   display: block;
   overflow: hidden;
   width: 1000px;
   height: 600px;
-
-  // display: none;
-  border: 5px solid #ccc;
-
+  border: 5px solid #ddd;
   z-index: 3;
   border-radius: 20px;
 }
-
-// #game-container > div {
-//
-//
-//   display: block;
-// }
 
 #game-container > div > figure {
   font-size: 30px;
@@ -655,7 +645,6 @@ input {
   position: absolute;
   right: 10px;
   top: 150px;
-  // margin: auto;
   cursor: pointer;
   z-index: 3;
 }
@@ -663,7 +652,7 @@ input {
 
 #game-container {
   width: 1020px;
-  padding-top: 150px;
+  padding-top: 50px;
   position: relative;
   display: block;
   margin: auto;
@@ -673,17 +662,30 @@ input {
 
 #game-window {
     position: absolute;
-    // height: 100%;
-    // overflow: hidden;
     top: 0px;
     bottom: 0px;
     right: 0px;
     left: 0px;
     z-index: 2;
     background-color:rgba(0, 0, 0, 0.5);
-    // display: none;
 }
 
 #asteroids {
  background: image-url("asteroids.png") no-repeat center;
+}
+
+#game-container > div > div > p {
+  position: relative;
+  font-size: 40px;
+  color: #ddd;
+  left: 80px;
+  bottom: -40px;
+}
+
+div > div#explanation > p {
+  position: relative;
+  font-size: 20px;
+  color: #ddd;
+  left: 40px;
+  bottom: 20px;
 }
