@@ -149,7 +149,7 @@ Detail:
     -show and validate quantitiy of rewards for project show page
     -show a funded sign when the project has been funded and prevent reward clicks
     -no shake for wrong username and password
-
+    -project show page count down days
   -asteroids
     -good readme
     -maybe startrek theme

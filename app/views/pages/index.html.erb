@@ -355,6 +355,11 @@
     $('#game-window ').toggleClass('hidden')
   });
 
+  $('#asteroids-link').on("click", function (event) {
+    $('main').toggleClass('hidden')
+    $('#game-window ').toggleClass('hidden')
+  });
+
   var backgroundImage = "<%= asset_path('outer-space.jpg') %>";
   var canvasEl = document.getElementById("game-canvas");
   var canvasHeight = canvasEl.height = window.innerHeight;
