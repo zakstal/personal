@@ -228,6 +228,15 @@ main {
   cursor: pointer;
 }
 
+video {
+  width: 600px;
+  display: block;
+  height: 400px;
+  margin: auto;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
 .project p {
   margin: auto;
   padding: 40px 40px 80px 40px;
@@ -671,7 +680,7 @@ input {
 }
 
 #asteroids {
- background: image-url("asteroids.png") no-repeat center;
+ // background: image-url("asteroids.png") no-repeat center;
 }
 
 #game-container > div > div > p {

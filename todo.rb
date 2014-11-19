@@ -4,8 +4,14 @@
  simon questions
  go through simon email interview questions
 
-
-
+  -ksclone
+    -rename
+    -add a custom domain
+    -seed data
+    -signin inssues
+  -look through simon suggestions
+  -send mom resume and coverletter for review
+  -email kalie
 
 
 Detail:
@@ -98,6 +104,11 @@ Detail:
 
   projects:
   -kickstarter
+    -add a custom domain
+    -seed data
+    -signin inssues
+
+    -rename kickstarter
     -working project start
     -working project edit
       -add instructions in story for description
@@ -116,6 +127,8 @@ Detail:
     -style project start page
     -style drop down menu
     -good readme
+    -user show from project page. others can see your profile
+    -
     -fix dorp down menu click on anywhere to close
     -have backed projects and created projects dissaperar if empty
     -styled logo
@@ -133,7 +146,8 @@ Detail:
     -comments
     -add tests
     -password confirmation
-
+    -show and validate quantitiy of rewards for project show page
+    -show a funded sign when the project has been funded and prevent reward clicks
     -no shake for wrong username and password
 
   -asteroids
