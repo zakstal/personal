@@ -24,6 +24,11 @@ img {
 
 }
 
+#my-image {
+  margin-left: 50px;
+  // background: #adf;
+}
+
 html, body {
   height: 100%;
   position: relative;
@@ -36,7 +41,7 @@ body {
   //   linear-gradient(
   //     #abb, #add
   //   );
-  color: #333;
+  color: #444;
 
 }
 
@@ -234,10 +239,19 @@ main {
 }
 
 #title > h1 {
-  padding: 60px 10px 40px 40px;
+  padding: 10px 10px 40px 40px;
   // font-family: sans-serif;
   font-size: 50px;
   // font-weight: bold;
+}
+
+.dev-tag {
+  position: relative;
+  font-size: 20px;
+  top: 85px;
+  left: 210px;
+  font-weight: bold;
+  color: #666;
 }
 
 #projects {
@@ -286,6 +300,13 @@ div.project a  {
     padding: 20px;
     display: inline-block;
     color: #e45;
+}
+
+#kickstarter-link {
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
 }
 
 div.project a:hover  {
