@@ -1,0 +1,10 @@
+<section id="contact" class="hidden" data-id="-400">
+  <form class="group" action="<%= deliver_url %>" method="post">
+    <%= form_auth %>
+  <input type="text" placeholder="From:" name="email[contact_email]" value="">
+  <input type="hidden" name="email[zak_eamil]" value="zakstal@gmail.com">
+  <input type="submit" id="submit" value="Send">
+
+    <textarea name="email[body]" rows="8" cols="40" placeholder="Email me"></textarea>
+  </form>
+</section>

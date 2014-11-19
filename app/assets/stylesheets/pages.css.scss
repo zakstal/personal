@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body, main, section, img, div, form, input, h1, textarea,
-button, form {
+button, form, a  {
   margin: 0;
   padding: 0;
   border: 0;
@@ -11,6 +11,7 @@ button, form {
   color: inherit;
   display: block;
   font-family: lucida;
+  text-decoration: none;
 }
 
 
@@ -93,28 +94,58 @@ p {
   right: 0px;
   width: 70px;
   height: 40px;
-
+  cursor: pointer;
   // background: #fff;
 }
 .list-item:nth-child(1) {
   right: 20px;
   top: 15px;
-  background: image-url("github.png") no-repeat center;
+  // background: image-url("github.png") no-repeat center;
   width: 70px;
 }
+
+
 
 .list-item:nth-child(2) {
   right: 20px;
   top: 60px;
-  background: image-url("facebook.png") no-repeat center;
+
   width: 70px;
 }
 
 .list-item:nth-child(3) {
   right: 20px;
   top: 105px;
-  background: image-url("linkedin.png") no-repeat center;
+
   width: 70px;
+}
+
+.list-item > div {
+  margin: auto;
+  height: 32px;
+  width: 32px;
+}
+
+.list-item > img  {
+  margin: auto;
+  transition: all 0.2s;
+  border-radius: 4px;
+}
+.list-item:nth-child(1):hover > img {
+  background: #fa0;
+}
+
+.list-item:nth-child(2) > div {
+  height: 20px;
+  width: 32px;
+}
+.list-item:nth-child(2):hover > img {
+  background: #8aa;
+}
+
+
+.list-item:nth-child(3):hover > img {
+  background: #880;
 }
 
 #buffer {
@@ -222,7 +253,7 @@ main {
 .project-image {
   width: 600px;
   display: block;
-  height: 400px;
+  height: 335px;
   margin: auto;
   border-radius: 20px;
   cursor: pointer;
@@ -231,16 +262,33 @@ main {
 video {
   width: 600px;
   display: block;
-  height: 400px;
+  height: 335px;
   margin: auto;
+  background: #222;
   // border-radius: 20px;
-  // border: 3px solid #888;
+  border: 10px solid #abb;
   cursor: pointer;
 }
 
+.live-git {
+  position: relative;
+  width: 150px;
+  margin:auto;
+}
+
+div.project a  {
+    height: 0;
+    padding: 20px;
+    display: inline-block;
+    color: #e45;
+}
+
+div.project a:hover  {
+    color: #333;
+}
 .project p {
   margin: auto;
-  padding: 40px 40px 80px 40px;
+  padding: 20px 20px 40px 20px;
   display: block;
 
 }

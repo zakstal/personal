@@ -72,9 +72,9 @@
     <div id="face"></div>
     <div id="social">
       <div class="list">
-        <div class="list-item"></div>
-        <div class="list-item"></div>
-        <div class="list-item"></div>
+        <a href="https://github.com/zakstal" class="list-item"><%= image_tag("github.png") %></a>
+        <a href="mailto:zakstal@gmail.com" class="list-item"><%= image_tag("mail_small.png") %></a>
+        <a href="www.linkedin.com/pub/zachary-stallings/a8/4b3/384/" class="list-item"><%= image_tag("linkedin.png") %></a>
       </div>
     </div>
     <ul class="side-nav" id="side-navigation">
@@ -95,6 +95,8 @@
     <%= render "about" %>
 
     <%= render "projects" %>
+
+    <%= render "contact" %>
 
   </div>
 </main>
