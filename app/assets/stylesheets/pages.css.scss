@@ -9,12 +9,20 @@ button, form, a  {
   border: 0;
   font: inherit;
   color: inherit;
-  display: block;
   font-family: lucida;
   text-decoration: none;
 }
 
+.group:after {
+    content: "";
+    display: block;
+    clear: both;
+}
 
+img {
+  display: block;
+
+}
 
 html, body {
   height: 100%;
@@ -135,17 +143,14 @@ p {
   background: #fa0;
 }
 
-.list-item:nth-child(2) > div {
-  height: 20px;
-  width: 32px;
-}
+
 .list-item:nth-child(2):hover > img {
-  background: #8aa;
+  background: #880;
 }
 
 
 .list-item:nth-child(3):hover > img {
-  background: #880;
+  background: #8aa;
 }
 
 #buffer {
@@ -214,7 +219,7 @@ main {
 #intro > p {
   // border-top: 1px solid #aaa;
   margin-top: 40px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   padding-bottom: 40px;
 }
 
@@ -293,8 +298,41 @@ div.project a:hover  {
 
 }
 
+#contact > div#large-icon-contact {
+  display: block;
+  padding: 80px ;
+}
+
+a.large-icon {
+  display: block;
+  padding: 5px;
+  width: 127px;
+  height: 127px;
+  // margin: 15px;
+  transition: all 0.2s;
+  border-radius: 100px;
+}
+
+a.large-icon:hover{
+  background: #e45
+}
+
+a.large-icon:nth-child(1) {
+  float: left;
+  margin-left: 10px;
+}
+
+a.large-icon:nth-child(2) {
+  float: right;
+  margin-right: 10px;
+}
+
+a.large-icon:nth-child(3) {
+  margin: auto;
+
+}
+
 form {
-  // border-top: 1px solid #aaa;
   margin-top: 40px;
 }
 

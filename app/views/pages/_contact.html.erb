@@ -1,4 +1,10 @@
 <section id="contact" class="hidden" data-id="-400">
+
+  <p>
+    Contact me by email by the form below or at zakstal@gmail.com. You can also send me a text via twilio by clicking on "text me" in the upper left hand corner.
+  </p>
+
+
   <form class="group" action="<%= deliver_url %>" method="post">
     <%= form_auth %>
   <input type="text" placeholder="From:" name="email[contact_email]" value="">
@@ -7,4 +13,7 @@
 
     <textarea name="email[body]" rows="8" cols="40" placeholder="Email me"></textarea>
   </form>
+
+  <%= render "social" %>
+
 </section>
