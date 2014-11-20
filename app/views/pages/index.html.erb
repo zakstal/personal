@@ -1,91 +1,19 @@
 
 <div id="container-all">
 
-
-<div id="game-window" class="hidden">
-
-  <div id="game-container">
-    <div>
-      <div>
-        <p>
-          Asteroids!
-        </p>
-      </div>
-    <figure for="game-canvas">&times;</figure>
-    <canvas id="game-canvas"></canvas>
-    <div id="explanation">
-      <p>
-        Use arrow keys to navigate and the space bar to fire
-      </p>
-    </div>
-  </div>
-  </div>
-</div>
+<%= render "asteroids_model" %>
 <main>
 
-  <div id="text-tab-click">
+<%= render "text" %>
 
-  </div>
-
-  <div id="text-window">
-    <div id="text-frame">
-
-    </div>
-  </div>
-  <form id="text-form">
-
-
-  <input type="text" name="some_name" class="text-message-hide" id="text-message-out">
-  <input type="submit" class="text-message-submit-hide" id="text-message-submit" name="some_name" value="">
-  </form>
-  <div id="text-tab" class="text-tab-left group">
-
-  </div>
-
-
-
-  <div id="text-me">
-    <span id="c1" data-id="off" class="c1 text-me-style">T</span>
-    <span id="c2" class="text-me-style c2">E</span>
-    <span id="c3" class="text-me-style c3">X</span>
-    <span id="c4" class="text-me-style c4">T</span>
-    <!-- <span id="c5" class="text-me-style c5"> </span> -->
-    <span id="c6" class="text-me-style c6">M</span>
-    <span id="c7" class="text-me-style c7">E</span>
-  </div>
   <div id="buffer">
 
 
 
   </div>
-    <section id="head-window">
-        <ul id="head-nav">
-          <li id="nav-header">NIL</li>
-          <li id="nav-header">Intro</li>
-          <li id="nav-header">About Me</li>
-          <li id="nav-header">Projects</li>
-          <li id="nav-header">Contact</li>
-        </ul>
-      </section>
-      <div id="all-content">
-
-    <div id="face"></div>
-    <div id="social">
-      <div class="list">
-        <a href="https://github.com/zakstal" class="list-item"><%= image_tag("github.png") %></a>
-        <a href="mailto:zakstal@gmail.com" class="list-item"><%= image_tag("mail_small.png") %></a>
-        <a href="https://www.linkedin.com/pub/zachary-stallings/a8/4b3/384/" class="list-item"><%= image_tag("linkedin.png") %></a>
-      </div>
-    </div>
-    <ul class="side-nav" id="side-navigation">
-      <li class="side-nav-li" id="intro-tab" data-id="intro">Intro</li>
-      <li class="side-nav-li" id="about-tab" data-id="about">About</li>
-      <li class="side-nav-li" id="project-tab" data-id="projects">Projects</li>
-      <li class="side-nav-li" id="Contact-tab" data-id="contact">Contact</li>
-    </ul>
+  <%= render "navigation" %>
 
 
-    
     <div id="title">
       <span class="dev-tag">Web Developer</span>
       <h1>Zachary Stallings</h1>
@@ -99,6 +27,7 @@
 
     <%= render "contact" %>
 
+    <%= render "resume" %>
   </div>
 </main>
 
@@ -112,20 +41,25 @@
       chat: []
     }
 
-    var address = "http://www.zakstal.com"//"http://zakwebsite.herokuapp.com" //"http://localhost:3000"
+    var address = "http://www.zakstal.com"
     var that = this
+
+//-------closes a nitice activedted
+              //after an email is sent from the contact form-------------
 
     setTimeout(function() {
       $('#notice').removeClass('notice')
       $('#notice').addClass('notice-hide')
     },3000)
 
+//----------toggles sections depending on thier id--------------------------
+
     this.currentTab = $('#intro')
     var that = this;
     $('.side-nav').on('click', function(event) {
 
       var tabContent = $(event.target).data('id')
-
+      console.log(tabContent, event.target)
       that.currentTab.addClass("hidden")
       that.currentTab = $('#' + tabContent)
       that.currentTab.removeClass("hidden")
@@ -136,6 +70,9 @@
 
 
     });
+
+//------------fixes side nav to the left
+                        //of the main window on scroll-------------------------
 
     $('#side-navigation').css('left', -134 + "px")
     $(window).scroll(function() {
@@ -159,7 +96,7 @@
     });
 
 
-
+//------------animation functions for "text me" click----------------
 
     var moveLetters = function (elementNum, classNumStart, interval) {
           setTimeout(function () {
@@ -202,6 +139,8 @@
           }
       }
 
+//--------------------chat-------------------------
+
       var checkIfInThiChat = function (arr) {
         console.log("in check")
         var unPostedMessages = []
@@ -216,6 +155,8 @@
         });
         return unPostedMessages;
       }
+
+//------------get incoming texts from the db---------
 
       var getTextsFromDb = function () {
         setInterval(function () {
@@ -240,18 +181,13 @@
       }
 
 
-      // $.ajax({
-      //   type: "POST",
-      //   url: address + "/chats/send_out",
-      //   data: { 'body':"someone is looking at your site" },
-      //   success: function (resp) {
-      //     console.log("sent", resp)
-      //   }
-      // });
 
 
+//-----------turns on or off ajax request to
+                //the db if chat window is open or closed--------------
 
       this.isChatOn = false
+
 
 
       var toggleIsChatOn = function () {
@@ -276,6 +212,9 @@
 
         }
       }
+
+//------------toggle hide and show classes
+                          //for text message input form------------------
 
       console.log($('#c1').css('left'), "css value of c1")
       var moveLettersBackAndForth = function () {
@@ -303,7 +242,7 @@
           setTimeout(function() {
               $('#text-message-out').focus();
           },200)
-
+//---------move letters if id c1 has off or on------
           var $c1 = $('#c1')
 
           if ($c1.data('id') === 'off') {
@@ -339,12 +278,12 @@
   				data: { 'body':$value },
   				success: function (resp) {
   					console.log("sent", resp)
-
-
   				}
         });
 			});
   });
+
+//---------------toggle asteroids modle----------
 
   $('figure').on("click", function (event) {
     $('main').toggleClass('hidden')
@@ -370,6 +309,7 @@
   var image = document.getElementById("image-back")
   ast.start(backgroundImage);
 
+//----------------play or pause poject mouseover video--------------
 
   $('.project-image').on("mouseover","video", function(event) {
     console.log(event.currentTarget, "moseover")
