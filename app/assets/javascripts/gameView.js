@@ -63,7 +63,7 @@
       }
     }
 
-console.log("goingggg")
+// console.log("goingggg")
 
     }, 20);
   };

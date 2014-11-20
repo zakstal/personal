@@ -255,6 +255,10 @@ main {
   color: #666;
 }
 
+#resume {
+  min-height: 100px;
+}
+
 #projects {
   // height: 100px;
   padding: 5px;
@@ -807,4 +811,68 @@ div > div#explanation > p {
   color: #ddd;
   left: 40px;
   bottom: 20px;
+}
+
+
+
+#resume-show {
+  display: block;
+  overflow: hidden;
+  width: 900px;
+  height: 950px;
+  border: 5px solid #ddd;
+  z-index: 3;
+  border-radius: 20px;
+}
+
+#resume-close {
+  font-size: 30px;
+  font-weight: bold;
+  color: #444;
+  position: absolute;
+  right: 40px;
+  top: 30px;
+  cursor: pointer;
+  z-index: 3;
+}
+
+
+#resume-container {
+  width: 900px;
+  padding-top: 10px;
+  position: relative;
+  display: block;
+  margin: auto;
+  margin: auto;
+}
+
+
+
+#resume-window {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    z-index: 2;
+    background-color:rgba(0, 0, 0, 0.5);
+}
+
+.resume-link {
+  cursor: pointer;
+}
+
+iframe {
+  height: 950px;
+  width: 900px;
+}
+
+#download-my-resume {
+font-size: 15px;
+color: #444;
+position: absolute;
+left: 40px;
+top: 15px;
+cursor: pointer;
+z-index: 3;
 }

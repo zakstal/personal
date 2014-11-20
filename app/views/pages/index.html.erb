@@ -1,7 +1,8 @@
 
 <div id="container-all">
-
+<%= render "resume_model" %>
 <%= render "asteroids_model" %>
+
 <main>
 
 <%= render "text" %>
@@ -283,22 +284,24 @@
 			});
   });
 
-//---------------toggle asteroids modle----------
+//--------------model toggle function-------------------------
 
-  $('figure').on("click", function (event) {
+var modelToggle = function(clickOn, modelTag) {
+  $(clickOn).on("click", function (event) {
+    event.preventDefault();
+    console.log('model toggle')
     $('main').toggleClass('hidden')
-    $('#game-window ').toggleClass('hidden')
+    $(modelTag).toggleClass('hidden')
   });
+}
+//----------------toggle resume model--------------------------
+  modelToggle('.resume-link', '#resume-window');
+  modelToggle('#resume-close', '#resume-window');
+//---------------toggle asteroids model------------------------
 
-  $('#asteroids').on("click", function (event) {
-    $('main').toggleClass('hidden')
-    $('#game-window ').toggleClass('hidden')
-  });
-
-  $('#asteroids-link').on("click", function (event) {
-    $('main').toggleClass('hidden')
-    $('#game-window ').toggleClass('hidden')
-  });
+  modelToggle('figure', '#game-window');
+  modelToggle('#asteroids', '#game-window');
+  modelToggle('#asteroids-link', '#game-window');
 
   var backgroundImage = "<%= asset_path('outer-space.jpg') %>";
   var canvasEl = document.getElementById("game-canvas");
@@ -311,16 +314,8 @@
 
 //----------------play or pause poject mouseover video--------------
 
-  $('.project-image').on("mouseover","video", function(event) {
-    console.log(event.currentTarget, "moseover")
-    event.currentTarget.play()
 
-  })
-
-  $('.project-image').on("mouseout","video", function(event) {
-    console.log(event.currentTarget, "moseover")
-    event.currentTarget.pause()
-
-  })
+  var video = new PageFunctions.videoPLay();
+  video.play()
 
 </script>

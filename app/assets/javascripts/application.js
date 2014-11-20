@@ -17,14 +17,10 @@
 //= require utils
 //= require movingObject
 //= require asteroid
-
-
 //= require keymaster
-
-
-
 //= require bullets
 //= require ship
 //= require game
 //= require gameView
+//= requier videoPlay
 //= require_tree .
