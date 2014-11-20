@@ -10,8 +10,8 @@
     -seed data
     -signin inssues
   -look through simon suggestions
-  -send mom resume and coverletter for review
   -email kalie
+  -pingdome
 
 
 Detail:

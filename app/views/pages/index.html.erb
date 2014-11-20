@@ -37,15 +37,12 @@
 <script charset="utf-8">
   $(document).ready(function() {
 
-    var thisChat = {
-      isChatOn: false,
-      chat: []
-    }
+
 
     var address = "http://www.zakstal.com"
     var that = this
 
-//-------closes a nitice activedted
+//-------closes a notice activedted
               //after an email is sent from the contact form-------------
 
     setTimeout(function() {
@@ -97,50 +94,12 @@
     });
 
 
-//------------animation functions for "text me" click----------------
 
-    var moveLetters = function (elementNum, classNumStart, interval) {
-          setTimeout(function () {
-
-            $('#c' + elementNum).toggleClass('c' + (classNumStart ))
-            $('#c' + elementNum).toggleClass('c' + (classNumStart + 1))
-          },(interval));
-      }
-
-      var moveLettersBack = function (elementNum, classNumStart, interval) {
-            setTimeout(function () {
-              $('#c' + elementNum).toggleClass('c' + (classNumStart - 1))
-              $('#c' + elementNum).toggleClass('c' + (classNumStart ))
-            },(interval));
-        }
-
-      var moveAllLetters = function ( numberOfPositions, interval) {
-          for (var i = 0; i <= numberOfPositions; i++) {
-            moveLetters(1,i + 1, i * interval)
-            moveLetters(2,i + 2, i * interval)
-            moveLetters(3,i + 3, i * interval)
-            moveLetters(4,i + 4, i * interval)
-            moveLetters(5,i + 5, i * interval)
-            moveLetters(6,i + 6, i * interval)
-            moveLetters(7,i + 7, i * interval)
-          }
-      }
-
-      var moveAllLettersBack = function ( numberOfPositions, interval) {
-          var j = 0
-          for (var i = numberOfPositions; i > 0; i--) {
-            moveLettersBack(1,i + 1, j * interval)
-            moveLettersBack(2,i + 2, j * interval)
-            moveLettersBack(3,i + 3, j * interval)
-            moveLettersBack(4,i + 4, j * interval)
-            moveLettersBack(5,i + 5, j * interval)
-            moveLettersBack(6,i + 6, j * interval)
-            moveLettersBack(7,i + 7, j * interval)
-            j++
-          }
-      }
-
-//--------------------chat-------------------------
+//////////--------------------chat-------------------------
+    var thisChat = {
+      isChatOn: false,
+      chat: []
+    }
 
       var checkIfInThiChat = function (arr) {
         console.log("in check")
@@ -214,8 +173,54 @@
         }
       }
 
+
+//------------animation functions for "text me" click----------------
+
+          var moveLetters = function (elementNum, classNumStart, interval) {
+                setTimeout(function () {
+
+                  $('#c' + elementNum).toggleClass('c' + (classNumStart ))
+                  $('#c' + elementNum).toggleClass('c' + (classNumStart + 1))
+                },(interval));
+            }
+
+            var moveLettersBack = function (elementNum, classNumStart, interval) {
+                  setTimeout(function () {
+                    $('#c' + elementNum).toggleClass('c' + (classNumStart - 1))
+                    $('#c' + elementNum).toggleClass('c' + (classNumStart ))
+                  },(interval));
+              }
+
+            var moveAllLetters = function ( numberOfPositions, interval) {
+                for (var i = 0; i <= numberOfPositions; i++) {
+                  moveLetters(1,i + 1, i * interval)
+                  moveLetters(2,i + 2, i * interval)
+                  moveLetters(3,i + 3, i * interval)
+                  moveLetters(4,i + 4, i * interval)
+                  moveLetters(5,i + 5, i * interval)
+                  moveLetters(6,i + 6, i * interval)
+                  moveLetters(7,i + 7, i * interval)
+                }
+            }
+
+            var moveAllLettersBack = function ( numberOfPositions, interval) {
+                var j = 0
+                for (var i = numberOfPositions; i > 0; i--) {
+                  moveLettersBack(1,i + 1, j * interval)
+                  moveLettersBack(2,i + 2, j * interval)
+                  moveLettersBack(3,i + 3, j * interval)
+                  moveLettersBack(4,i + 4, j * interval)
+                  moveLettersBack(5,i + 5, j * interval)
+                  moveLettersBack(6,i + 6, j * interval)
+                  moveLettersBack(7,i + 7, j * interval)
+                  j++
+                }
+            }
+
+
 //------------toggle hide and show classes
                           //for text message input form------------------
+
 
       console.log($('#c1').css('left'), "css value of c1")
       var moveLettersBackAndForth = function () {
@@ -256,8 +261,6 @@
 
         });
       }
-
-
 
 
       moveLettersBackAndForth()
