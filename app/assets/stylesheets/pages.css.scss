@@ -439,6 +439,7 @@ form {
   text-align: center;
   color: #333;
   text-size: 30px;
+  z-index: 4;
 }
 
 .message-from-box {
@@ -868,11 +869,14 @@ iframe {
 }
 
 #download-my-resume {
-font-size: 15px;
-color: #444;
-position: absolute;
-left: 40px;
-top: 15px;
-cursor: pointer;
-z-index: 3;
+  font-size: 15px;
+  color: #444;
+  position: absolute;
+  left: 40px;
+  top: 15px;
+  cursor: pointer;
+  z-index: 3;
+  background: #fff;
+  padding: 10px;
+  border-radius: 20px;
 }
