@@ -545,21 +545,82 @@ form {
   cursor: pointer;
 }
 
-.text-message-submit-show {
-    float: right;
-    display: block;
-    background: #e45;
-    border: 1px solid #c23;
-    width: 20px;
-    height: 51px;
-    padding: 3px;
-    padding-left: 5px;
-    margin: 3px;
-    margin-right: -270px;
-    margin-top: 121px;
-    cursor: pointer;
+#hide-text {
+  position: absolute;
+  top: 141px;
+  left: 27px;
+  font-size: 15px;
+  color: #e45;
 }
 
+#hid-text-mask {
+  color:transparent;
+  position: absolute;
+  top: 141px;
+  left: 27px;
+  font-size: 15px;
+  background-image: linear-gradient(transparent, #fff 95%)
+  // background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, transparent),color-stop(0, #fff));
+  //       background-image: -webkit-linear-gradient(top, transparent, white);
+  //       background-image: -moz-linear-gradient(top, transparent, white);
+  //       background-image: -ms-linear-gradient(top, transparent, white);
+  //       background-image: -o-linear-gradient(top, transparent, white);
+}
+
+.text-message-submit-show {
+  float: right;
+  display: block;
+  background: #e45;
+  border: 1px solid #c23;
+  border-radius: 10px;
+  width: 20px;
+  height: 51px;
+  padding: 3px;
+  padding-left: 5px;
+  margin: 3px;
+  margin-right: -270px;
+  margin-top: 121px;
+  cursor: pointer;
+}
+
+#send-send-text {
+
+  font-family: 'Lato', sans-serif;
+  position: relative;
+  font-weight: bold;
+  color: #c23;
+  font-size: 10px;
+}
+
+#send-send-text span {
+  position: relative;
+
+}
+
+#send-send-text span:nth-child(n+3) {
+  font-size: 9px;
+}
+
+#send-send-text span:nth-child(1) {
+  font-size: 10.5px;
+  left: -0.5px;
+}
+
+#send-send-text span:nth-child(2) {
+  left: -0.5px;
+  top: -2px;
+
+}
+
+#send-send-text span:nth-child(3) {
+  left: -0.5px;
+  top: -4px;
+  font-size: 8.5px;
+}
+
+#send-send-text span:nth-child(4) {
+  top: -6px;
+}
 .text-message-submit-hide {
   display: none;
 }
