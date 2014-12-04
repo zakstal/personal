@@ -5,7 +5,7 @@
   </p>
 
   <div class="project">
-    <div src="" class="project-image"><%= video_tag("kickstarter.mov") %></div>
+    <div src="" class="project-image"><%= video_tag("kickstarter.#{@videotype}") %></div>
   <div class="live-git">
       <a href="https://github.com/zakstal/KickStarterClone"><h2>git</h2></a>|<a href="http://ksclone.herokuapp.com/"><h2>live</h2></a>
     </div>
@@ -13,7 +13,7 @@
   </div>
 
   <div class="project">
-    <div src="" class="project-image" id="asteroids"><%= video_tag("asteroids.mov") %></div>
+    <div src="" class="project-image" id="asteroids"><%= video_tag("asteroids.#{@videotype}") %></div>
     <div class="live-git">
       <a href="https://github.com/zakstal/asteroid-game"><h2>git</h2></a>|<a href="#" id="asteroids-link"><h2>live</h2></a>
     </div>
@@ -21,7 +21,7 @@
   </div>
 
   <div class="project">
-    <div src="" class="project-image"><%= video_tag("chess.mov") %></div>
+    <div src="" class="project-image"><%= video_tag("chess.#{@videotype}") %></div>
     <div class="live-git">
       <a href="https://github.com/zakstal/Chess"><h2>git</h2></a>
     </div>

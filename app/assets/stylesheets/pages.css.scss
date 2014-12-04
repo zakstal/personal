@@ -646,6 +646,7 @@ form {
 .c1 {
   position: absolute;
   -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
   margin-top: 145px;
   height: 30px;
   transition: .1s;
@@ -654,6 +655,7 @@ form {
 .c2 {
   position: absolute;
   -webkit-transform: rotate(-80.1deg);
+  -moz-transform: rotate(-80.1deg);
   margin-top: 135px;
   height: 30px;
   transition: .1s;
@@ -663,6 +665,7 @@ form {
   // display: none;
   position: absolute;
   -webkit-transform: rotate(-50.3deg);
+  -moz-transform: rotate(-50.3deg);
   margin-top: 126px;
   height: 30px;
   transition: .1s;
@@ -672,6 +675,7 @@ form {
   // display: none;
   position: absolute;
   -webkit-transform: rotate(-25.3deg);
+  -moz-transform: rotate(-25.3deg);
   margin-top: 122px;
   height: 25px;
   transition: .1s;
