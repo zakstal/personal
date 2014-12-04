@@ -2,7 +2,6 @@
 (function () {
   $(document).ready(function(){
 
-
   $('#side-navigation').css('left', -134 + "px")
   $(window).scroll(function() {
      if($(window).scrollTop() > 200) {
