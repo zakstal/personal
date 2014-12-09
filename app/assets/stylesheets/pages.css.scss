@@ -300,7 +300,7 @@ video {
   margin:auto;
 }
 
-div.project a  {
+a.project-links  {
     height: 0;
     padding: 20px;
     display: inline-block;
@@ -314,7 +314,7 @@ div.project a  {
   padding: 0;
 }
 
-div.project a:hover  {
+a.project-links:hover  {
     color: #333;
 }
 .project p {
